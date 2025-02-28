@@ -1,1 +1,209 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #db76ef;  /* Light Background */
+  background-image: url('assets/MBG.jpg');
+
+  margin: 0;
+  padding: 0;
+  color: rgb(189, 213, 203);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Smooth Page Fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  
+  background: #033257; 
+  background-image: url('assets/BG2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  color: #FFCBA4;  /* White Text */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  animation: slideUp 1.2s ease-in-out;
+}
+
+/* Slide-up effect */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #e94e6b; /* Purple Theme */
+  position: relative;
+  animation: bounceText 1.5s infinite alternate;
+}
+
+/* Bounce effect */
+@keyframes bounceText {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Sections */
+section {
+  margin-top: 30px;
+  padding: 15px;
+  border-left: 4px solid #8e44ad;
+  background: rgba(255, 255, 255, 0.1); /* Glass Effect */
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Project Links */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  animation-delay: 0.7s;
+}
+
+ul li a {
+  color: #8e44ad;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+  color:  #002aff;
+  transform: translateX(5px);
+}
+
+/* Resume Button */
+.btn {
+  display: inline-block;
+  background: #8e44ad;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background:rgba(213, 174, 235, 0.8);
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(176, 70, 70, 0.5);
+}
+
+/* Contact Section */
+section p {
+  font-size: 1.1rem;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+section a {
+  color: #8e44ad;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+section a:hover {
+  text-decoration: underline;
+  color: #002aff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section h2 {
+    color: #002aff;
+    font-size: 1.3rem;
+    color: rgb(6, 73, 51);
+  }
+}
+.about {
+  background-color: rgba(213, 174, 235, 0.8); /* Light background with 80% opacity */
+  padding: 20px;
+  border-radius: 8px;
+}
+.highlight-title {
+  background: rgba(176, 7, 162, 0.7); /* Dark Opaque Background */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.highlight-text {
+  background: rgba(195, 11, 219, 0.2); /* Light Opaque Background */
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
